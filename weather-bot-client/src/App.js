@@ -11,7 +11,8 @@ function App() {
     <div>
       {!Object.keys(authData).length && (
         <GoogleOAuthProvider clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID}>
-          <div>
+          <div className="heading">
+            <div className="title">WEATHER BOT ADMIN PANEL, LOGIN TO ENTER</div>
             <GoogleLogin
               onSuccess={async (credentialResponse) => {
                 const response = await axios.post(

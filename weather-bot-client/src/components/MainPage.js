@@ -64,16 +64,22 @@ const MainPage = () => {
       <h2>Subscription List</h2>
       <ul>
         {userList.map((user) => (
-          <li key={user._id}>
+          <li style={{ fontWeight: "bold" }} key={user._id}>
             <p>{user.userName || user.firstName}</p>{" "}
             <span className="dot-before"></span>{" "}
             {`Joined: ${getFormattedDate(user.createdAt)}`}
             {user.isSubscriptionActive ? (
-              <button onClick={() => removeSubscription(user._id)}>
+              <button
+                style={{ backgroundColor: "red" }}
+                onClick={() => removeSubscription(user._id)}
+              >
                 Remove Subscription
               </button>
             ) : (
-              <button onClick={() => addSubscription(user._id)}>
+              <button
+                style={{ backgroundColor: "green" }}
+                onClick={() => addSubscription(user._id)}
+              >
                 Add Subscription
               </button>
             )}

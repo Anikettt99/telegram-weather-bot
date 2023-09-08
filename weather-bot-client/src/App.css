@@ -39,3 +39,20 @@
 .read-the-docs {
   color: #888;
 }
+
+.heading {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.title {
+  font-size: 25px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.5em;
+  padding-bottom: 15px;
+  position: relative;
+  margin-bottom: 25px;
+}
